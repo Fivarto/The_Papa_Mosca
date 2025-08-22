@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://daeeobgoesnce"]
+
+[ext_resource type="Script" uid="uid://obagyeus53u3" path="res://Scripts/leader_board_ui.gd" id="1_n7umr"]
+[ext_resource type="FontFile" uid="uid://nqjewwk4e1lx" path="res://Assets/Fonts/pixel.ttf" id="1_qhpo6"]
+[ext_resource type="Texture2D" uid="uid://c0ffaxq1gjg5l" path="res://Assets/UI/Button.png" id="3_kqukr"]
+
+[node name="LeaderBoardUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n7umr")
+
+[node name="LeaderBoardList" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -65.0
+offset_right = 90.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="LeaderBoardList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qhpo6")
+theme_override_font_sizes/font_size = 10
+text = "FROGGO = 10000000"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="LeaderBoardList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qhpo6")
+theme_override_font_sizes/font_size = 10
+text = "FROGGO = 10000000"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="LeaderBoardList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qhpo6")
+theme_override_font_sizes/font_size = 10
+text = "FROGGO = 10000000"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="LeaderBoardList"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qhpo6")
+theme_override_font_sizes/font_size = 10
+text = "FROGGO = 10000000"
+horizontal_alignment = 1
+
+[node name="Back_To_Menu_Button" type="Button" parent="."]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -40.0
+offset_right = 68.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("3_kqukr")
+flat = true
+
+[node name="Label" type="Label" parent="Back_To_Menu_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_qhpo6")
+theme_override_font_sizes/font_size = 10
+text = "back"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Back_To_Menu_Button" to="." method="_on_back_to_menu_button_pressed"]

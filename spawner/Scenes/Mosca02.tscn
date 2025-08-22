@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dquudcwi6feab"]
+
+[ext_resource type="Script" uid="uid://btmr527yfb3m" path="res://Scripts/item.gd" id="1_0puyy"]
+[ext_resource type="Texture2D" uid="uid://dbb7t27okhm8x" path="res://Assets/Item - Food/Apple.png" id="2_awg5y"]
+[ext_resource type="Resource" uid="uid://beta3lyd2ajlv" path="res://Resources/Items/Food/Carrot.tres" id="2_va0t6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u06aw"]
+
+[node name="Item" type="Area2D" groups=["Food"]]
+script = ExtResource("1_0puyy")
+item_res = ExtResource("2_va0t6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_awg5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u06aw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

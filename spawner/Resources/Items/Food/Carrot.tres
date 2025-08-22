@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="item_resource" load_steps=3 format=3 uid="uid://beta3lyd2ajlv"]
+
+[ext_resource type="Texture2D" uid="uid://de3u4u1u5mjqs" path="res://Assets/Enemies/Mosca3.png" id="1_golqr"]
+[ext_resource type="Script" uid="uid://ca8qf4f4a35ly" path="res://Scripts/item_resource.gd" id="1_ks0ka"]
+
+[resource]
+script = ExtResource("1_ks0ka")
+item_texture = ExtResource("1_golqr")
+item_name = "Carrot"
+item_move_speed = 100
+item_points = 30
+metadata/_custom_type_script = "uid://ca8qf4f4a35ly"
