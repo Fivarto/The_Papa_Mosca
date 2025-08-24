@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://co717h2t62wic"]
+
+[ext_resource type="Script" uid="uid://dn0bolwyjiakb" path="res://Scripts/Enemies/mosca_base.gd" id="1_8c4cs"]
+[ext_resource type="Resource" uid="uid://juub5nwc1a8k" path="res://Resources/Enemies/Mosca-01.tres" id="2_kwru6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_je8kh"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwru6"]
+size = Vector2(20, 2)
+
+[node name="Mosca_Base" type="Area2D"]
+script = ExtResource("1_8c4cs")
+mosca_res = ExtResource("2_kwru6")
+
+[node name="Mosca_Sprite" type="Sprite2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource("CircleShape2D_je8kh")
+
+[node name="OutScreenHitBox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OutScreenHitBox"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_kwru6")
+debug_color = Color(0.928991, 0.266031, 0.0155924, 0.42)
+
+[connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="area_entered" from="OutScreenHitBox" to="." method="_on_out_screen_hit_box_area_entered"]

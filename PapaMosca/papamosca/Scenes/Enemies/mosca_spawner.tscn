@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4nbaa2jklv74"]
+
+[ext_resource type="Script" uid="uid://blxh3122gvjim" path="res://Scripts/Enemies/mosca_spawner.gd" id="1_1th87"]
+
+[node name="Mosca_Spawner" type="Node2D"]
+script = ExtResource("1_1th87")

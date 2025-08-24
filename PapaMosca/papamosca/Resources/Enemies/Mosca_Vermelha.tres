@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Mosca_Resource" load_steps=3 format=3 uid="uid://vskd73xooy26"]
+
+[ext_resource type="Texture2D" uid="uid://ge1km00fsa11" path="res://Assets/Enemies/Mosca_Vermelha.png" id="1_j87ik"]
+[ext_resource type="Script" uid="uid://dnlca4ti1cyy0" path="res://Resources/Enemies/mosca_resource.gd" id="1_t0fpf"]
+
+[resource]
+script = ExtResource("1_t0fpf")
+mosca_texture = ExtResource("1_j87ik")
+mosca_name = "Mosca_Vermelha"
+mosca_move_speed = 80.0
+mosca_points = 30
+metadata/_custom_type_script = "uid://dnlca4ti1cyy0"

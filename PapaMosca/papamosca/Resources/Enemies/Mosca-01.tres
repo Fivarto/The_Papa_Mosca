@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Mosca_Resource" load_steps=3 format=3 uid="uid://juub5nwc1a8k"]
+
+[ext_resource type="Script" uid="uid://dnlca4ti1cyy0" path="res://Resources/Enemies/mosca_resource.gd" id="1_2cw3v"]
+[ext_resource type="Texture2D" uid="uid://6vl34gmeue0v" path="res://Assets/Enemies/Mosca_Base.png" id="1_dnckg"]
+
+[resource]
+script = ExtResource("1_2cw3v")
+mosca_texture = ExtResource("1_dnckg")
+mosca_name = "Mosca_Base"
+mosca_move_speed = 50.0
+mosca_points = 10
+metadata/_custom_type_script = "uid://dnlca4ti1cyy0"
